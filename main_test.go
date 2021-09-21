@@ -1,7 +1,7 @@
 package main
 
 import (
-	"os"
+	//"os"
 	"testing"
 
 	//"github.com/hoisie/mustache"
@@ -12,7 +12,7 @@ func TestDivideString(t *testing.T) {
 	s := divideString("")
 	assert.Equal(t, s, "", "El string esta vacio")
 }
-
+/*
 func TestAsign(t *testing.T) {
 	var cases = []struct {
 		Type   string
@@ -40,6 +40,38 @@ func TestAsign(t *testing.T) {
 			m := (lt3 == 0)
 			assert.Equal(t, m, "El tercer parametro esta vacio")
 		}
+	}
+}*/
+
+func TestAsign(t *testing.T) {
+	var cases = []struct {
+		Input   string // input string in order to be parsed
+		Success bool   // paser result
+		Type    string // the input type
+		Value   string // the input value
+		Length  int    // value length
+	}{
+		{"TX02AB", true, "TX", "AB", 2},
+		{"NN100987654321", true, "NN", "0987654321", 10},
+		{"TX06ABCDE", false, "", "", 0},
+		{"NN04000A", false, "", "", 0},
+	}
+	for _, testData := range cases {
+
+		a := divideString(testData.Input)
+		//a := divideString("TX02AB")
+
+		/*var a []string
+
+		a[0] = testData.Type
+		a[1] = testData.Length
+		a[2] = testData.Value*/
+		
+		test := asign(a)	//Convert to string
+
+		assert.Equal(t, testData.Type, test.Type)
+		assert.Equal(t, testData.Value, test.Value)
+		assert.Equal(t, testData.Length, test.Length)
 	}
 }
 
@@ -96,6 +128,30 @@ func TestParser(t *testing.T) {
 	}
 }*/
 
-func TestMain(m *testing.M) {
+/*func TestMain(m *testing.M) {
 	os.Exit(m.Run());
-}
+}*/
+
+/*func TestMain(t *testing.T) {
+	var cases = []struct {
+		Input   string // input string in order to be parsed
+		Success bool   // paser result
+		Type    string // the input type
+		Value   string // the input value
+		Length  int    // value length
+	}{
+		{"TX02AB", true, "TX", "AB", 2},
+		{"NN100987654321", true, "NN", "0987654321", 10},
+		{"TX06ABCDE", false, "", "", 0},
+		{"NN04000A", false, "", "", 0},
+	}
+	for _, testData := range cases {
+
+		s := divideString(testData.Input)
+		result := asign(s)	//Convert to string
+
+		assert.Equal(t, testData.Type, result.Type)
+		assert.Equal(t, testData.Value, result.Value)
+		assert.Equal(t, testData.Length, result.Length)
+	}
+}*/

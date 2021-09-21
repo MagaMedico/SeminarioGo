@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go2021/model"
+	"strconv"
 	"strings"
 )
 
@@ -15,7 +16,8 @@ func asign(values []string) model.Result {
 	t := values[0] + values[1]
 	l := values[2] + values[3]
 	v := values[4:]
-	return model.NewResult(t, l, strings.Join(v, ""))
+	l_, _ := strconv.Atoi(l)
+	return model.NewResult(t, l_, strings.Join(v, ""))
 }
 
 func main() {

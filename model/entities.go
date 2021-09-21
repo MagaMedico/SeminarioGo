@@ -2,10 +2,10 @@ package model
 
 type Result struct {
 	Type   string
-	Length string
+	Length int
 	Value  string
 }
 
-func NewResult(Type string, Length string, Value string) Result {
+func NewResult(Type string, Length int, Value string) Result {
 	return Result{Type, Length, Value}
 }

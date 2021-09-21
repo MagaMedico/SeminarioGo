@@ -3,7 +3,6 @@ module go2021
 go 1.17
 
 require (
-	github.com/hoisie/mustache v0.0.0-20160804235033-6375acf62c69
 	github.com/stretchr/testify v1.7.0
 )
 

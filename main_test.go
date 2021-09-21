@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"testing"
 
 	//"github.com/hoisie/mustache"
@@ -42,6 +43,37 @@ func TestAsign(t *testing.T) {
 	}
 }
 
+/*Funcion nueva
+func TestAsign(t *testing.T) {
+	
+	case1 := []string{"NNN", "987654321", "10"}
+	asign(case1)
+	case2 := []string{"", "0", ""}
+	case3 := []string{"", "10", "JDD"}
+	case4 := []string{"0004", "5000000", ""}
+
+	c := 0
+
+	for _, testData := range case1 {
+		lt1 := len(testData)
+		if c == 0 && lt1 != 2 {
+			m := (lt1 != 2)
+			assert.Equal(t, m, "El tamaño de el primer parametro debe ser 2")
+		}
+		lt2 := len(testData)
+		if c == 1 && lt2 != 2 {
+			m := lt2 != 2
+			assert.Equal(t, m, "El segundo parametro debe ser menor a 99")
+		}
+		lt3 := len(testData)
+		if c == 2 && lt3 == 0 {
+			m := (lt3 == 0)
+			assert.Equal(t, m, "El tercer parametro esta vacio")
+		}
+		c++
+	}
+}*/
+
 /*
 func TestParser(t *testing.T) {
 	var cases = []struct {
@@ -63,3 +95,7 @@ func TestParser(t *testing.T) {
 		assert.Equal(t, err == nil, testData.Success)
 	}
 }*/
+
+func TestMain(m *testing.M) {
+	os.Exit(m.Run());
+}

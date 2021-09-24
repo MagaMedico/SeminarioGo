@@ -7,7 +7,7 @@ _Realizamos la consigna solicitda teniendo en cuenta las pautas de esta._
 Comenzamos creando los documentos necesarios los cuales son:
 ```
   * main.go contiene las funciones:
-    - divideString: se le pasa por parametro un string y se lo separa en cracteres generando un array de caracteres.
+    - divideString: se le pasa por parametro un string y se lo separa en caracteres generando un array de caracteres.
     - asign: se le pasa por parametro el array de caracteres para posteriormente asignarlos a cada valor de la estructura Result.
     - main: llama a las funciones divideString, pasando un string determinado, y asign y muestra en consola el resultado retornado por el ultimo metodo.
     
@@ -23,7 +23,7 @@ Comenzamos creando los documentos necesarios los cuales son:
       * TestNewResult: crea valores que deberían dar error para posteriormente insertarlos en la estructura. Se visualizan en pantalla mensajes de error si estos no coinciden con la estructura.
   
   * main_test.go: es el test del documento main.go y contiene:
-    - TestDivideString: se le pasa por parametro un string y se lo separa en cracteres generando un array de caracteres.
+    - TestDivideString: se le pasa por parametro un string y se lo separa en caracteres generando un array de caracteres.
     - TestAsign: se crea una estructura de casos para testear. Se inserta en la estructura Result y se crean aserciones para cada atributo de la estructura. 
   
   * out: archivo para guardar la salida del test sobre un archivo.
@@ -34,7 +34,7 @@ Comenzamos creando los documentos necesarios los cuales son:
   
   * go.sum: generado automaticamente cuando se ejecuta el comando go.mod.init.go2021
 
-### Comandos utilizacos📋
+### Comandos utilizados📋
 
 Para la creación del módulo para importar archivos internamente: go mod init go2021
 
@@ -45,11 +45,9 @@ Para ejecutar los archivos: go run <nombre_archivo>.go
 Para testing:
   Para saber que porcentaje se encuentra testeado y guardar la salida de test en el archivo out: go test ./... -coverprofile=out.test
 
-Para analizar el archivo de salida y observar lo testeado (en verde) y lo no testeado (en rojo) en html: go tool cover -html out -o out.html_
+  Para analizar el archivo de salida y observar lo testeado (en verde) y lo no testeado (en rojo) en html: go tool cover -html out -o out.html
 
 ## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 - Cecilia Carlón: [CeciliaCarlon](https://github.com/CeciliaCarlon)
 - Magalí Médico: [MagaMedico](https://github.com/MagaMedico)
